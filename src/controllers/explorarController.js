@@ -16,7 +16,6 @@ exports.explorar = (req, res) => {
             console.log(erro);
         } else {
             usuarios = results
-            console.log('oi')
 
             explorar.consultarPublicacoes(function(erro, results) {
                 if(erro){
@@ -29,7 +28,6 @@ exports.explorar = (req, res) => {
                             console.log(erro);
                         } else {
                             comentarios = results
-                            console.log(publicacoes)
                             res.render('explorar', {comentarios, publicacoes, usuarios});
                         }
                     })

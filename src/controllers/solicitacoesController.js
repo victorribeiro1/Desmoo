@@ -14,8 +14,6 @@ exports.solicitacoes = (req, res) => {
             console.log(erro);
         } else {
             solicitacoes = results
-            console.log(solicitacoes)
-
             res.render('solicitacoes', {solicitacoes});
         }
     })

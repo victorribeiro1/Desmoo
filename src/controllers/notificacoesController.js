@@ -14,7 +14,6 @@ exports.notificacoes = (req, res) => {
             console.log(erro);
         } else {
             notificacoes = results
-            console.log(notificacoes)
 
             res.render('notificacoes', {notificacoes});
         }

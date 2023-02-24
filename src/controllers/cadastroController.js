@@ -26,7 +26,6 @@ let etapaCadastro;
 let codigoValidacaoEmail;
 
 exports.dadosEssenciais = (req, res) => {
-    // console.log('nada a ver')
     etapaCadastro = 'validacaoDadosEssenciais'
     res.render('cadastro_dadosEssenciais');
 };
@@ -44,12 +43,8 @@ exports.validacaoDadosEssenciais = (req, res, next) => {
             if(erro){
                 console.log(erro);
             } else {
-                // console.log(results)
-    
                 let cpfJaCadastrado = results[0]['cpf'] == 1
                 let emailJaCadastrado = results[0]['email'] == 1
-    
-                // console.log(cpfJaCadastrado, emailJaCadastrado)
     
                 if(cpfJaCadastrado || emailJaCadastrado) {
                     etapaCadastro = 'validacaoDadosEssenciais'
@@ -91,7 +86,6 @@ exports.gerarCodigo = (req, res, next) => {
         }
         
         const codigo = gerarCodigo()
-        // console.log(codigo)
         codigoValidacaoEmail = codigo
 
         next()
@@ -124,7 +118,6 @@ exports.validacaoCodigo = (req, res, next) => {
             etapaCadastro = 'confirmacaoEmail'
             res.render('cadastro_confirmacaoEmail')
         }
-        // etapaCadastro = 'validacaoCodigo'
     } else {
         next()
     }
@@ -136,7 +129,6 @@ exports.selecaoCategoria = (req, res, next) => {
 
         etapaCadastro = 'confirmacaoLattes'
     } else {
-        console.log('next')
         next()
     }
 };
@@ -159,8 +151,6 @@ exports.confirmacaoLattes = (req, res, next) => {
 };
 
 exports.cadastrar = (req, res) => {
-    console.log(req.body)
-
     usuario.id_lattes = req.body.id_lattes
 
     const date = new Date()
@@ -181,18 +171,4 @@ exports.cadastrar = (req, res) => {
             res.redirect('/feed');
         }
     })
-    
-    // const primeiroNome = usuario.nome_completo.split(' ')
-
-    // console.log(primeiroNome)
-
-    // cadastro.consultarNumeroDeNomesIguaisJaCadastrados(primeiroNome, function(erro, results){
-    //     if (erro) {
-    //         console.log(erro);
-    //         console.log('dando erro aqui em')
-    //     } else {
-            // let idPersonalizavel = primeiroNome + results[0].quantidade_nomes
-            // console.log('o id:' + idPersonalizavel)
-            // usuario.id_personalizavel = idPersonalizavel
-    // })
 };

@@ -30,7 +30,6 @@ exports.perfil = (req, res) => {
                             console.log(erro);
                         } else {
                             comentarios = results
-                            console.log(comentarios)
         
                             res.render('perfil', {comentarios, publicacoes, usuario});
                         }

@@ -16,8 +16,6 @@ exports.review = (req, res) => {
             console.log(erro);
         } else {
             publicacao = results[0]
-            console.log(publicacao)
-
             res.render('review', {publicacao});
         }
     })

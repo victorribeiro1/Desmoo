@@ -13,8 +13,6 @@ exports.respostaSolicitacao = (req, res) => {
 
     const categoria = (req.body.situacao == "aceito") ? "qualificado" : "entusiasta"
 
-    console.log('opa')
-
     respostaSolicitacaoModel.removerSolicitando(id, function(erro, results) {
         if(erro){
             console.log(erro);
@@ -22,13 +20,8 @@ exports.respostaSolicitacao = (req, res) => {
             const usuario = { id, categoria }
 
             respostaSolicitacaoModel.alterarCategoria(usuario, function(erro, results) {
-                if(erro){
-                    console.log(erro);
-                } else {
-        
-        
-                    res.redirect('/solicitacoes');
-                }
+                if (erro) console.log(erro);
+                else res.redirect('/solicitacoes');
             })
         }
     })
