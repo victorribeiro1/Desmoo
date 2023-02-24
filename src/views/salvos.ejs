@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Salvos</title>
+
+        <link rel="icon" type="image/png" sizes="16x16" href="../midias/imagens/favicon.png">
+
+        <link rel="stylesheet" href="../css/salvos.css">
+    </head>
+    <body>
+        <div class="container">
+            <%- include('components/menu.ejs'); %>
+
+            <main class="salvos">
+                <div class="salvos__salvo" tipo-publicacao="discussao">
+                    <div class="salvos__salvo__bloco-esquerda">
+                        <div class="salvos__salvo__bloco-esquerda__tipo-publicacao">Review Científica</div>
+                        <h2 class="salvos__salvo__bloco-esquerda__titulo-publicacao">Como dormir mal pode te levar à morte</h2>
+
+                    </div>
+                    <div class="salvos__salvo__tres-pontinhos">
+                        <div class="salvos__salvo__tres-pontinhos__pontinho"></div>
+                        <div class="salvos__salvo__tres-pontinhos__pontinho"></div>
+                        <div class="salvos__salvo__tres-pontinhos__pontinho"></div>
+                    </div>
+                </div>
+                <div class="salvos__salvo" tipo-publicacao="pesquisa">
+                    <div class="salvos__salvo__bloco-esquerda">
+                        <div class="salvos__salvo__bloco-esquerda__tipo-publicacao">Review Científica</div>
+                        <h2 class="salvos__salvo__bloco-esquerda__titulo-publicacao">Como dormir mal pode te levar à morte</h2>
+                    </div>
+
+                    <div class="salvos__salvo__tres-pontinhos" >
+                        <div class="salvos__salvo__tres-pontinhos__pontinho"></div>
+                        <div class="salvos__salvo__tres-pontinhos__pontinho"></div>
+                        <div class="salvos__salvo__tres-pontinhos__pontinho"></div>
+                    </div>
+                </div>
+                <div class="salvos__salvo" tipo-publicacao="review">
+                    <div class="salvos__salvo__bloco-esquerda">
+                        <div class="salvos__salvo__bloco-esquerda__tipo-publicacao">Review Científica</div>
+                        <h2 class="salvos__salvo__bloco-esquerda__titulo-publicacao">Como dormir mal pode te levar à morte</h2>
+
+                    </div>
+                    <div class="salvos__salvo__tres-pontinhos">
+                        <div class="salvos__salvo__tres-pontinhos__pontinho"></div>
+                        <div class="salvos__salvo__tres-pontinhos__pontinho"></div>
+                        <div class="salvos__salvo__tres-pontinhos__pontinho"></div>
+                    </div>
+                </div>
+            </main>
+
+            <%- include('components/menu-secundario.ejs'); %>
+
+            <%- include('components/iala.ejs') %>
+        </div>
+    </body>
+</html>

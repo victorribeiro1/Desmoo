@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Usuário cadastrado</title>
+
+        <link rel="icon" type="image/png" sizes="16x16" href="../midias/imagens/favicon.png">
+        
+        <link rel="stylesheet" href="cadastro.css">
+    </head>
+    <body>
+        <h1>Dados Gravados com Sucesso!</h1><br />
+        <b>Dados Gravados:</b><br />
+        <br />
+        <!-- ID Usuário: <%= usuario.id %><br /> -->
+        ID Lattes: <%= usuario.id_lattes %><br />
+        <!-- ID Personalizável: <%= usuario.id_personalizavel %><br /> -->
+        <br />
+        Nome: <%= usuario.nome_completo %><br />
+        Categoria: <%= usuario.categoria %><br />
+        Email: <%= usuario.email %><br />
+        Senha: <%= usuario.senha %><br />
+        <!-- Idade: <%= usuario.idade %><br /> -->
+        CPF: <%= usuario.cpf %><br />
+        Data Cadastro: <%= usuario.data_cadastro %><br />
+        <br />
+        <!-- Número Seguidores: <%= usuario.seguidores %><br />
+        Número Seguindo: <%= usuario.seguindo %><br />
+        Número Pontos: <%= usuario.pontos %><br />
+        Número Advertências: <%= usuario.advertencias %><br />
+        <a href="/">Página Inicial</a> -->
+    </body>
+</html>

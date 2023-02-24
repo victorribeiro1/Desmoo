@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/cadastro.css">
+        <title>Confirmação de E-mail</title>
+
+        <link rel="icon" type="image/png" sizes="16x16" href="../midias/imagens/favicon.png">
+    </head>
+    <body>
+        <div class=" cadastro-comum confirmacao-email">
+            <div class="cadastro-comum__container-imagem">
+                <video class="cadastro-comum__container-imagem__imagem" autoplay loop muted>
+                    <source src="../midias\videos\animacao-cadastro.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="cadastro-comum__conteudo confirmacao-email__conteudo"> 
+                <div class="cadastro-comum__conteudo__cabecalho">
+                    <img src="../midias/imagens/isologo.png" alt="" class="cadastro-comum__conteudo__cabecalho__isologo">
+    
+                    <div class="cadastro-comum__conteudo__cabecalho__instrucoes">
+                        <a href="" class="tamanho-texto-comum cadastro-comum__conteudo__cabecalho__instrucoes__voltar"> < Voltar</a>
+                        <h1 class="cadastro-comum__conteudo__cabecalho__instrucoes__titulo">Crie sua conta Desmoo</h1>
+                    </div>
+                </div>
+
+                <form class="icon cadastro-comum__conteudo__form confirmacao-email__conteudo__form" action="" method="post">
+                    <svg class="cadastro-comum__conteudo__form__icone cadastro-comum__icone confirmacao-email__conteudo__form__icone-email">
+                        <use xlink:href="../midias/icones/email.svg#email"></use>
+                    </svg>
+                    <span class="cadastro-comum__conteudo__form__descricao confirmacao-email__conteudo__form__descricao">Confirmar Email</span>
+                    
+                    <input type="text" name="codigo" class="tamanho-texto-comum cadastro-comum__conteudo__form__input confirmacao-email__conteudo__form__input-codigo" placeholder="Inserir código enviado pelo e-mail">
+
+                    <div class="cadastro-comum__conteudo__form__box-confirm confirmacao-email__conteudo__form__box-confirm">
+                        <input type="submit" class="tamanho-texto-comum cadastro-comum__conteudo__form__box-confirm__botao-avancar confirmacao-email__conteudo__form__box-confirm__botao-avancar" value="Avançar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    &::-webkit-scrollbar {
+        width: 4px;
+
+        &-thumb {
+            background-color: var(--cor-principal);
+        }
+    }
+}
+
+a {
+    &,
+    &:link,
+    &:visited {
+        color: currentColor;
+        text-decoration: none;
+    }
+}

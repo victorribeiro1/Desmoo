@@ -1,0 +1,49 @@
+html {
+   // COR
+   --cor-principal: #11D183;
+   --cor-cinza: #D9D9D9;
+   --cor-cinza-escuro: #999;
+   --cor-discussao: #07BDDE;
+   --cor-pesquisa: var(--cor-principal);
+   --cor-review: #D11111;
+
+   // SCREEN 
+      // HEIGHT
+      --min-height: ;
+      --max-height: ;
+   
+      // WIDTH
+      --min-width: ;
+      --max-width: ;
+
+   // TRANSITION
+   --transition-1: .2s ease;
+
+   // DISTÂNCIAS
+   --distancia-horizontal: 30px;
+   --distancia-vertical: 10px;
+   
+   // BREAKPOINT
+      // WIDTH
+      $breakpoint-width-1: 1600px;
+
+   // TEXTO
+   --tamanho-text-comum: 1.7rem;
+   --tamanho-text-importante: 4rem;
+
+   
+   @media only screen and (max-width: $breakpoint-width-1) {
+      --tamanho-text-comum: 1.4rem;
+      --tamanho-text-importante: 3rem;
+   }
+
+   // @media only screen and (max-width: 1350px) {
+   //    --tamanho-text-comum: 1.4rem;
+   // }
+
+   // @media only screen and (max-width: 550px) {
+   //    --tamanho-text-comum: 1.8rem;
+   // }
+
+   // OUTROS
+}

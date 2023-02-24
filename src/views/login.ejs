@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+
+        <link rel="icon" type="image/png" sizes="16x16" href="../midias/imagens/favicon.png">
+
+        <link rel="stylesheet" href="css/cadastro.css">
+    </head>
+    <body>
+        <div class="cadastro-comum cadastro">
+            <div class="cadastro-comum__container-imagem">
+                <video class="cadastro-comum__container-imagem__imagem" autoplay loop muted>
+                    <source src="../midias/videos/animacao-cadastro.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="cadastro-comum__conteudo">
+                <div class="cadastro-comum__conteudo__cabecalho">
+                    <img src="midias/imagens/isologo.png" alt="isologo Desmoo" class="cadastro-comum__conteudo__cabecalho__isologo">
+                    <div class="cadastro-comum__conteudo__cabecalho__instrucoes">
+                        <div class="tamanho-texto-comum cadastro-comum__conteudo__cabecalho__instrucoes__voltar">< Voltar</div>
+                        <h1 class="tamanho-texto-comum cadastro-comum__conteudo__cabecalho__instrucoes__titulo">Entrar em sua conta Desmoo</h1>
+                    </div>
+                </div>
+
+                <form action="login" method="post" class="cadastro-comum__conteudo__form cadastro__conteudo__form">
+                    <div class="cadastro__conteudo__form__inputs">
+                        <input type="text"      id="email"          name="email"         obrigatorio="true"    placeholder="E-mail"                class="tamanho-texto-comum cadastro-comum__conteudo__form__input cadastro__conteudo__form__inputs__input cadastro__conteudo__form__inputs__input">
+                        <input type="password"  id="senha"          name="senha"         obrigatorio="true"    placeholder="Senha"                 class="tamanho-texto-comum cadastro-comum__conteudo__form__input cadastro__conteudo__form__inputs__input cadastro__conteudo__form__inputs__input">
+                    </div>
+
+                    <input type="submit" id="botaoEnvio" value="Avançar" class="tamanho-texto-comum cadastro-comum__conteudo__form__box-confirm__botao-avancar cadastro__conteudo__form__botao-avancar">
+
+                    <a href="/cadastro" class="tamanho-texto-comum cadastro__conteudo__form__login">
+                        Ainda não tem cadastro?
+                    </a>
+                </form>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            const mensagem = '<%=erro.mensagem%>'
+            if (mensagem != '') {
+                alert(mensagem)
+            }
+        </script>
+    </body>
+</html>

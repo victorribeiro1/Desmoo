@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notificações</title>
+
+        <link rel="icon" type="image/png" sizes="16x16" href="../midias/imagens/favicon.png">
+
+        <link rel="stylesheet" href="../css/notificacoes.css">
+    </head>
+    <body>
+        <div class="container">
+            <%- include('components/menu.ejs'); %>
+
+            <main class="notificacoes">
+                <%  for (let index = 0; index < notificacoes.length; index++) { %>
+                    <div class="notificacoes__notificacao">
+                        <div class="notificacoes__notificacao__bloco-esquerda">
+                            <img src=<%=notificacoes[index].caminho_foto_perfil%> alt="Foto de perfil do usuário" class="notificacoes__notificacao__bloco-esquerda__foto-perfil">
+                            <svg class="icon notificacoes__notificacao__bloco-esquerda__icone">
+                                <use xlink:href="midias/icones/<%=notificacoes[index].categoria%>.svg#<%=notificacoes[index].categoria%>"></use>
+                            </svg>
+                            <div class="notificacoes__notificacao__bloco-esquerda__conteudo">
+                                <span class="notificacoes__notificacao__bloco-esquerda__conteudo__nome-autor">
+                                    <%=notificacoes[index].nome_completo%>
+                                </span>
+                                <span class="notificacoes__notificacao__bloco-esquerda__conteudo__tipo-interacao">
+                                    <%  if (notificacoes[index].categoria == 'curtida') { %>
+                                        <%= "Curtiu" %>
+                                    <%  } else if (notificacoes[index].categoria == 'comentario') { %>
+                                            <%= "Comentou" %>
+                                    <%  } else if (notificacoes[index].categoria == 'compartilhar') { %>
+                                            <%= "Compartilhou" %>
+                                    <%  } else if (notificacoes[index].categoria == 'salvar') { %>
+                                            <%= "Salvou" %>
+                                    <%  } %>
+                                </span>
+                                <span class="notificacoes__notificacao__bloco-esquerda__conteudo__seu-post">seu post!</span>
+                            </div>
+    
+                        </div>
+                        <div class="tres-pontinhos">
+                            <div class="tres-pontinhos__pontinho"></div>
+                            <div class="tres-pontinhos__pontinho"></div>
+                            <div class="tres-pontinhos__pontinho"></div>
+                        </div>
+                    </div>
+                <%  }  %>
+            </main>
+
+            <%- include('components/menu-secundario.ejs'); %>
+
+            <%- include('components/iala.ejs') %>
+        </div>
+    </body>
+</html>

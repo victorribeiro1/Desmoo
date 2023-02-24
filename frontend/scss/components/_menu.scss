@@ -1,0 +1,100 @@
+.menu {
+    @include flex-container(column, flex-start, center);
+
+    border-right: 1px solid black;
+
+    height: 100vh;
+    width: 27.5%;
+    
+    padding-top: 50px;
+
+    position: fixed;
+    top: 0;
+    
+    &__isologo {
+        &,
+        &:link,
+        &:visited {
+            display: inline-block;
+            height: 4.5rem;
+            margin-bottom: calc(var(--distancia-vertical) * 5);
+        }
+
+        &__img {
+            height: 100%;
+        }
+    }
+
+    &__lista {
+        @include flex-container(column, flex-start, flex-start);
+        margin-bottom: calc(var(--distancia-vertical) * 2);
+        // width: 25%;
+
+        &__item-lista {
+            @include flex-container(row, flex-start, center);
+
+            &:not(:last-of-type) {
+                margin-bottom: calc(var(--distancia-vertical) * 2);
+            }
+
+            &:last-of-type {
+                height: 4rem;
+
+                .menu__lista__item-lista__icone {
+                    height: 3rem;
+                    width:  4rem;
+                }
+            }
+
+            &__icone {
+                height: 4rem;
+                width:  4rem;
+
+                // margin-right: var(--distancia-horizontal);
+                margin-right: 15px;
+
+                cursor: pointer;
+
+                &:hover, &.atual {
+                    fill: var(--cor-principal);
+                }
+            }
+
+            &__link {
+                &,
+                &:link,
+                &:visited {
+                    color: black;
+                    font-size: 1.8rem;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &__botao {
+        &:link,
+        &:visited {
+            @include flex-container;
+
+            background-color: var(--cor-principal);
+            border-radius: 9999px;
+            border: none;
+
+            cursor: pointer;
+
+            font-size: 1.6rem;
+
+            height: 3rem;
+            width: 20rem;
+
+            transition: ease .2s;
+            
+            &:hover {
+                color: white;
+
+                transition: ease .2s;
+            }
+        }
+    }
+}

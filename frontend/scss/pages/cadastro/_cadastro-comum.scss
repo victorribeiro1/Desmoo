@@ -1,0 +1,291 @@
+.cadastro-comum {
+    height: 100vh;
+    min-height: 700px;
+    overflow-y: scroll;
+    width: 100%;
+
+    @include flex-container(row, space-between, unset);
+    overflow: hidden;
+
+    &__container-imagem {
+        // background-color: #a0a0a0;
+
+        width: 60%;
+
+        &__imagem {
+            position: relative;
+
+            -webkit-mask: url('../midias/imagens/mascara-cadastro.png');
+            -webkit-mask-size: 100%;
+
+            width: 100%;
+            // &::before {
+            //     content: "";
+
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     background: url('../midias/imagens/mascara-cadastro.png');
+            //     background-size: 100%;
+            //     background-position: top;
+            //     mix-blend-mode: screen;
+            // }
+        }
+    }
+    
+    &__conteudo {
+        width: 40%;
+        
+        padding: 50px 50px 0px 0;
+
+        margin-bottom: 0px;
+        
+        @include flex-container(column, flex-start, center);
+        
+        &__cabecalho {
+            // height: 25%;
+            width: 100%;
+
+            margin-bottom: 150px;
+
+            @media only screen and (max-height: 900px) {
+                margin-bottom: 80px;
+            }
+
+            @media only screen and (max-height: 750px) {
+                margin-bottom: 40px;
+            }
+
+            @include flex-container(column, flex-start, center);
+            
+            &__isologo {
+                width: 40%;
+
+                margin-bottom: 40px;
+            }
+            
+            &__instrucoes {
+                align-self: flex-start;
+
+                &__voltar {
+                    &,
+                    &:link,
+                    &:visited {
+                        color: var(--cor-principal);
+                        cursor: pointer;
+
+                        font-size: 1.6rem;
+
+                        margin-bottom: var(--distancia-vertical);
+                        
+                        text-decoration: none;
+                    }
+                }
+            
+                &__titulo {
+                    font-size: var(--tamanho-text-importante);
+                }
+            }
+        }
+        
+        &__form {
+            @include flex-container(column, flex-start, center);
+
+            width: 100%;
+            // height: 75%;
+
+            // transform: translateY(-8%);
+
+            .mensagem-de-erro {
+                color: red;
+
+                font-size: 1.2rem;
+
+                margin-bottom: 5px;
+            }
+
+            &__icone {
+                width: 10rem;
+                height: 10rem;
+
+                margin-bottom: 18px;
+
+                fill: var(--cor-principal);
+            }
+
+            &__descricao {
+                font-size: var(--tamanho-text-importante);
+
+                margin-bottom: 20px;
+            }
+        
+            &__input {
+                height: 6rem;
+                width: 100%;
+                
+                background-color: #E5E5E5;
+                border: none;
+                border-radius: 5px;
+
+                font-size: 1.6rem;
+
+                outline: none;
+                padding-left: 10px;
+
+                @media only screen and (max-height: 930px) {
+                    // background-color: red;
+                    height: 4rem;
+
+                    font-size: 1.5rem;
+                }
+            }
+
+            &__box-confirm {
+                @include flex-container(row, space-between, center);
+                // background-color: blue;
+
+                &__resgate-codigo {
+
+                }
+
+                &__botao-avancar {
+                    width: 100%;                    
+                    height: 4rem;
+                    min-height: 4rem;
+    
+                    background-color: var(--cor-principal);
+                    border: none;
+                    border-radius: 999px;
+    
+                    color: white;
+                    cursor: pointer;
+
+                    font-size: 1.6rem;
+
+                    margin-bottom: 20px;
+    
+                    transition: var(--transition-1);
+    
+                    &:hover {
+                        // background-color: #59e280;
+    
+                        transition: var(--transition-1);
+                    }
+    
+                    @media only screen and (max-width: 1700px) {
+                    //    width: 60%; 
+                    }
+
+                    @media only screen and (max-width: 1610px) {
+                    //    width: 58%; 
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1500px) {
+        &__container-imagem {
+            &__imagem {
+
+            }
+        }
+
+        &__conteudo {
+            // width: 35%;
+
+            &__cabecalho {
+                &__isologo {
+    
+                }
+                
+                &__instrucoes {
+    
+                    &__voltar {
+                        &,
+                        &:link,
+                        &:visited {
+    
+                        }
+                    }
+                
+                    &__titulo {
+    
+                    }
+                }
+            }
+            
+            &__form {
+                &__icone {
+    
+                }
+    
+                &__descricao {
+    
+                }
+            
+                &__input {
+                    // height: 5rem;
+                }
+    
+                &__box-confirm {
+    
+                    &__resgate-codigo {
+    
+                    }
+    
+                    &__botao-avancar {
+                        height: 3rem;
+                        min-height: 3rem;
+    
+                        &:hover {
+    
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (orientation: portrait) {
+        @include flex-container(row, center, center);
+
+        overflow: visible;
+
+        &__container-imagem {
+            display: none;
+        }
+
+        &__conteudo {
+            @include flex-container(column, flex-start, center);
+
+            height: 100%;
+            width: 100%;
+
+            margin: 0;
+            padding: 100px 50px 0 50px;
+
+            &__cabecalho {
+                height: 15%;
+
+                margin-bottom: 115px;
+            }
+
+            &__form {
+                height: unset;
+
+                justify-content: flex-start;
+
+                margin-bottom: 50px;
+
+                transform: translateY(0);
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

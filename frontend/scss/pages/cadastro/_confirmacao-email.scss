@@ -1,0 +1,29 @@
+.confirmacao-email{
+    &__conteudo {
+        &__form{
+            &__input-codigo {
+                margin-bottom: 20px;
+            }
+
+            &__box-confirm {
+                @include flex-container(column-reverse, space-between, center);
+
+                width: 100%;
+
+                &__resgate-codigo {
+                    // width: calc(35% - 20px);
+                    width: 100%;
+                    
+                    color: var(--cor-principal);
+                    cursor: pointer;
+                    
+                    font-family: "Lato Semibold";
+                    
+                    text-align: center;
+                    
+                    // white-space: nowrap;
+                }
+            }
+        }
+    }
+}
